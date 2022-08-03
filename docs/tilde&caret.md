@@ -32,4 +32,4 @@ For example, ```^0.0.3``` will only permit only exactly version ```0.0.3```.
 
 <img src="http://jontejada.com/blog/assets/semver05.png" width="300" height="250" />
 
-
+test
