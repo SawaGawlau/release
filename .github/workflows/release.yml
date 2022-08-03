@@ -1,9 +1,9 @@
 name: Node.js CI
 on:
   push:
-    branches: [ main ]
+    branches: [ xx ]
   pull_request:
-    branches: [ main ]
+    branches: [ xx ]
 env:
   GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
