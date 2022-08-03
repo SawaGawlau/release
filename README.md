@@ -1,7 +1,7 @@
 # Semantic Versioning = SemVer
 [**semantic-versioning**](https://semver.org) is popular scheme that is used for open-source projects to communicate the changes included in a published versions. 
 
-## Why should be use semantic versioning?
+## Why should we use semantic versioning?
 ### ["Dependency hell"](https://semver.org)
 In the world of software, the bigger your system grows and the more packages you integrate into your software it might quickly become a nightmare. If the dependency specifications are too tight, you are in danger of version lock (the inability to upgrade a package without having to release new versions of every dependent package). Dependency hell is when version lock and/or too prevent you from easily and safely moving your project forward.
 
