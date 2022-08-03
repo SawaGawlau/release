@@ -1,8 +1,7 @@
 name: Changelog
 on:
-  release:
-    types:
-      - created
+  push:
+    branches: [ main ]
 jobs:
   changelog:
     runs-on: ubuntu-20.04
