@@ -1,0 +1,23 @@
+{
+  "name": "release",
+  "version": "1.0.0",
+  "description": "Learn how to use conventional commits for default semantic versioning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SawaGawlau/release.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SawaGawlau/release/issues"
+  },
+  "homepage": "https://github.com/SawaGawlau/release#readme",
+  "dependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
