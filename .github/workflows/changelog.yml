@@ -9,7 +9,6 @@ jobs:
   changelog:
     runs-on: ubuntu-20.04
     steps:
-    steps:
       - name: Checkout Code
         uses: actions/checkout@v2
 
