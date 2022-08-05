@@ -20,4 +20,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
    # - run: npm test -- --watch=false --browsers=ChromeHeadless
-    - run: npx semantic-release
+    - run: npx semantic-release 
+   # before starting the workflow npm install --save -dev semantic-release
