@@ -1,6 +1,6 @@
 {
   "name": "release",
-  "version": "2.2.3",
+  "version": "1.8.0",
   "public": true,
   "description": "Learn how to use conventional commits for default semantic versioning",
   "main": "index.js",
@@ -20,25 +20,11 @@
   "release": {
     "branches": [
       "main"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git",
-      "@semantic-release/github"
-  ],
-  "dependencies": {
-    "@semantic-release/commit-analyzer": "^9.0.2",
-    "@semantic-release/error": "^3.0.0",
-    "@semantic-release/github": "^8.0.0",
-    "@semantic-release/npm": "^9.0.0",
-    "@semantic-release/release-notes-generator": "^10.0.0"
+    ]
   },
   "devDependencies": {
     "@semantic-release/changelog": "github:semantic-release/changelog",
     "@semantic-release/git": "github:semantic-release/git",
     "semantic-release": "^19.0.5"
   }
-}
 }
