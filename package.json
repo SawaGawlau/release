@@ -17,14 +17,7 @@
     "url": "https://github.com/SawaGawlau/release/issues"
   },
   "homepage": "https://github.com/SawaGawlau/release#readme",
-  "release": {
-    "branches": [
-      "main"
-    ]
-  },
   "devDependencies": {
-    "@semantic-release/changelog": "github:semantic-release/changelog",
-    "@semantic-release/git": "github:semantic-release/git",
     "semantic-release": "^19.0.5"
   }
 }
