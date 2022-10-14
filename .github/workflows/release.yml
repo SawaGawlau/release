@@ -1,7 +1,7 @@
 name: Node.js CI
 on:
   push:
-    branches: [ main ]
+    branches: [ test ]
   pull_request:
     branches: [ main ]
 env:
@@ -19,6 +19,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-   # - run: npm test -- --watch=false --browsers=ChromeHeadless
       # before starting the workflow npm install --save -dev semantic-release
     - run: npx semantic-release 
