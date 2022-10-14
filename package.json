@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/SawaGawlau/release#readme",
   "devDependencies": {
-    "semantic-release": "^19.0.3"
+    "semantic-release": "^19.0.5"
   }
 }
