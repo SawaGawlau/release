@@ -1,9 +1,8 @@
 name: Release npm package
 
 on:
-  push:
-    branches:
-      - release
+  push
+  
 jobs:
   release:
     name: Release
