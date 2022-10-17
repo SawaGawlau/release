@@ -8,7 +8,7 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-steps:
+    steps:
     - name: Release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
