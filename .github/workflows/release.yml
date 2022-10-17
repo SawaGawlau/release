@@ -1,25 +1,25 @@
-name: Release npm package
-
+name: Node.js CI
 on:
-  push
-  
+  push:
+    branches: [ release ]
+  pull_request:
+    branches: [ master, release ]
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 jobs:
-  release:
-    name: Release
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup Node.js
-      uses: actions/setup-node@v1
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
       with:
-        node-version: 16.x
-    - name: Install dependencies
-      run: npx ci
-    - name: Install semantic-release extra plugins
-      run: npm install --save-dev @semantic-release/changelog @semantic-release/git 
-    - name: Release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        NPM_TOKEN: ${{ secrets.SEMANTIC_RELEASE_BOT_NPM_TOKEN }}
-      run: npx semantic-release
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test -- --watch=false --browsers=ChromeHeadless
+    - run: npx semantic-release
