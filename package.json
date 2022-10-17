@@ -1,9 +1,11 @@
 {
   "name": "release",
   "version": "0.0.0-development",
-  "public": true,
-  "description": "Learn how to use conventional commits for default semantic versioning",
+  "description": "semantic release versioning",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/SawaGawlau/release.git"
   },
-  "author": "",
+  "keywords": [
+    "semver"
+  ],
+  "author": "sawa",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SawaGawlau/release/issues"
