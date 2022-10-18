@@ -1,6 +1,6 @@
 {
   "name": "release-sawa-gawlau",
-  "version": "2.6.1",
+  "version": "2.7.0",
   "public": false,
   "description": "Learn how to use conventional commits for default semantic versioning",
   "main": "index.js",
