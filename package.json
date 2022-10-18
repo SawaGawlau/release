@@ -1,32 +1,30 @@
 {
   "name": "release",
-  "version": "0.0.0-development",
-  "description": "semantic release versioning",
+  "version": "1.8.0",
+  "public": true,
+  "description": "Learn how to use conventional commits for default semantic versioning",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SawaGawlau/release.git"
   },
-  "keywords": [
-    "semver"
-  ],
-  "author": "sawa",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/SawaGawlau/release/issues"
   },
   "homepage": "https://github.com/SawaGawlau/release#readme",
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "devDependencies": {
-    "@commitlint/cli": "^17.1.2",
-    "@commitlint/config-conventional": "^17.1.0",
-    "husky": "^8.0.1",
+    "@semantic-release/changelog": "github:semantic-release/changelog",
+    "@semantic-release/git": "github:semantic-release/git",
     "semantic-release": "^19.0.5"
   }
 }
