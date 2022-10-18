@@ -17,6 +17,7 @@ jobs:
       - run: npm ci
       - run: git config --global user.email "sawa.gawlau@gmail.com"
       - run: git config --global user.name "SawaGawlau"
+      #- run: npx semantic-release
       - run: npm run release #generated changelog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
