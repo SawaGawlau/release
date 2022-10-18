@@ -15,7 +15,8 @@ jobs:
           cache: npm
           node-version: 16
       - run: npm ci
-      #- run: npx semantic-release
+      - run: git config --global user.email "sawa.gawlau@gmail.com"
+      - run: git config --global user.name "SawaGawlau"
       - run: npm run release #generated changelog
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
