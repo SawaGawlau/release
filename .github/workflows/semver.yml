@@ -2,8 +2,9 @@
 name: Release
 "on":
   push:
-    branches:
-      - release
+    branches: [ release, main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   release:
     name: release
