@@ -1,6 +1,8 @@
 branches:
   - main
-  - release
+  - test
+  - name: alpha
+    prerelease: true
 debug: true
 ci: true
 dryRun: false
