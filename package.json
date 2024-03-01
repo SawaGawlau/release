@@ -1,6 +1,6 @@
 {
   "name": "release-sawa-gawlau",
-  "version": "2.8.0",
+  "version": "2.7.0",
   "private": true,
   "description": "Learn how to use conventional commits for default semantic versioning",
   "main": "index.js",
@@ -19,6 +19,18 @@
     "url": "https://github.com/SawaGawlau/release/issues"
   },
   "homepage": "https://github.com/SawaGawlau/release#readme",
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
