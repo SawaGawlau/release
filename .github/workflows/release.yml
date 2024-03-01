@@ -3,10 +3,10 @@ name: Create Release
 on:
   push:
     branches:
-      - main # Change this to your main branch
+      - main
 
 jobs:
-  create_release:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,12 +18,29 @@ jobs:
         with:
           node-version: '14'
 
-      - name: Install conventional-changelog-cli
-        run: npm install -g conventional-changelog-cli
+      - name: Install dependencies
+        run: npm install
 
       - name: Generate changelog
-        run: conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+        run: npx conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 
+      - name: Commit changelog
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add CHANGELOG.md
+          git commit -m "chore: update changelog [skip ci]"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
