@@ -1,37 +1,24 @@
-name: Create Release
-
+name: Release
 on:
   push:
     branches:
-      - main # Change this to your main branch
-
+      - test
 jobs:
-  create_release:
+  release:
+    name: release
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install Node.js
-        uses: actions/setup-node@v2
+      - name: Start
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
-
-      - name: Install conventional-changelog-cli
-        run: npm install -g conventional-changelog-cli
-
-      - name: Generate changelog
-        run: conventional-changelog -p angular -i CHANGELOG.md -s -r 0
-
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
+          cache: npm
+          node-version: 16
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
-          body: |
-            Changes:
-            $(cat CHANGELOG.md)
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run semantic-release
