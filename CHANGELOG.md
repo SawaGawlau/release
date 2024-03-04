@@ -1,3 +1,10 @@
+## [3.1.3](https://github.com/SawaGawlau/release/compare/v3.1.2...v3.1.3) (2024-03-04)
+
+
+### Bug Fixes
+
+* delete some plugins ([57f2fb4](https://github.com/SawaGawlau/release/commit/57f2fb4ff50f7de58b1c7c70d2752d132f2be9c1))
+
 ## [3.1.2](https://github.com/SawaGawlau/release/compare/v3.1.1...v3.1.2) (2024-03-04)
 
 
