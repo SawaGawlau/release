@@ -18,6 +18,11 @@
   "bugs": {
     "url": "https://github.com/SawaGawlau/release/issues"
   },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "homepage": "https://github.com/SawaGawlau/release#readme",
   "dependencies": {
     "@semantic-release/github": "^9.2.6"
