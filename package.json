@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/SawaGawlau/release/issues"
   },
-  "homepage": "https://github.com/SawaGawlau/release#readme"
+  "homepage": "https://github.com/SawaGawlau/release#readme",
+  "dependencies": {
+    "@semantic-release/github": "^9.2.6"
+  },
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/release-notes-generator": "^12.1.0"
+  }
 }
